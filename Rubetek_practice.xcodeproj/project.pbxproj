@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E87C9B3294CF7817E3440E9 /* Pods_Rubetek_practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F599FA63EFC30AFFC53E4234 /* Pods_Rubetek_practice.framework */; };
+		72B98AA426F9E78600340D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B98AA326F9E78600340D4D /* AppDelegate.swift */; };
+		72B98AA626F9E78600340D4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B98AA526F9E78600340D4D /* SceneDelegate.swift */; };
+		72B98AA826F9E78600340D4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B98AA726F9E78600340D4D /* ViewController.swift */; };
+		72B98AAB26F9E78600340D4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B98AA926F9E78600340D4D /* Main.storyboard */; };
+		72B98AAD26F9E78900340D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B98AAC26F9E78900340D4D /* Assets.xcassets */; };
+		72B98AB026F9E78900340D4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B98AAE26F9E78900340D4D /* LaunchScreen.storyboard */; };
+		72B98ABA26F9EAB800340D4D /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B98AB926F9EAB800340D4D /* Cacher.swift */; };
+		72B98ABC26F9EC1300340D4D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B98ABB26F9EC1300340D4D /* NetworkService.swift */; };
+		72B98AC426F9EF0A00340D4D /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B98AC326F9EF0A00340D4D /* Instance.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		63078E12FD7FF5E10C99CAC1 /* Pods-Rubetek_practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rubetek_practice.release.xcconfig"; path = "Target Support Files/Pods-Rubetek_practice/Pods-Rubetek_practice.release.xcconfig"; sourceTree = "<group>"; };
+		72B98AA026F9E78600340D4D /* Rubetek_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rubetek_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72B98AA326F9E78600340D4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		72B98AA526F9E78600340D4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		72B98AA726F9E78600340D4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		72B98AAA26F9E78600340D4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		72B98AAC26F9E78900340D4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		72B98AAF26F9E78900340D4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		72B98AB126F9E78900340D4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72B98AB926F9EAB800340D4D /* Cacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cacher.swift; sourceTree = "<group>"; };
+		72B98ABB26F9EC1300340D4D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		72B98AC326F9EF0A00340D4D /* Instance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instance.swift; sourceTree = "<group>"; };
+		B328B2030FC3D4A50E18C16E /* Pods-Rubetek_practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rubetek_practice.debug.xcconfig"; path = "Target Support Files/Pods-Rubetek_practice/Pods-Rubetek_practice.debug.xcconfig"; sourceTree = "<group>"; };
+		F599FA63EFC30AFFC53E4234 /* Pods_Rubetek_practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rubetek_practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72B98A9D26F9E78600340D4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E87C9B3294CF7817E3440E9 /* Pods_Rubetek_practice.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72B98A9726F9E78600340D4D = {
+			isa = PBXGroup;
+			children = (
+				72B98AA226F9E78600340D4D /* Rubetek_practice */,
+				72B98AA126F9E78600340D4D /* Products */,
+				80C8A3F803A4F508B6C42C2C /* Pods */,
+				96181BF4D12CADD26A471A16 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		72B98AA126F9E78600340D4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72B98AA026F9E78600340D4D /* Rubetek_practice.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72B98AA226F9E78600340D4D /* Rubetek_practice */ = {
+			isa = PBXGroup;
+			children = (
+				72B98AC026F9ED5B00340D4D /* MainScreen */,
+				72B98AB826F9EAA900340D4D /* Helper */,
+				72B98AB726F9E81C00340D4D /* SupportFiles */,
+				72B98AAC26F9E78900340D4D /* Assets.xcassets */,
+				72B98AAE26F9E78900340D4D /* LaunchScreen.storyboard */,
+				72B98AB126F9E78900340D4D /* Info.plist */,
+			);
+			path = Rubetek_practice;
+			sourceTree = "<group>";
+		};
+		72B98AB726F9E81C00340D4D /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				72B98AA526F9E78600340D4D /* SceneDelegate.swift */,
+				72B98AA326F9E78600340D4D /* AppDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		72B98AB826F9EAA900340D4D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				72B98AB926F9EAB800340D4D /* Cacher.swift */,
+				72B98ABB26F9EC1300340D4D /* NetworkService.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		72B98ABD26F9ED4100340D4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72B98AC326F9EF0A00340D4D /* Instance.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72B98ABE26F9ED4900340D4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72B98AA926F9E78600340D4D /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72B98ABF26F9ED4E00340D4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				72B98AA726F9E78600340D4D /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72B98AC026F9ED5B00340D4D /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				72B98ABF26F9ED4E00340D4D /* Controller */,
+				72B98ABE26F9ED4900340D4D /* View */,
+				72B98ABD26F9ED4100340D4D /* Model */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		80C8A3F803A4F508B6C42C2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B328B2030FC3D4A50E18C16E /* Pods-Rubetek_practice.debug.xcconfig */,
+				63078E12FD7FF5E10C99CAC1 /* Pods-Rubetek_practice.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		96181BF4D12CADD26A471A16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F599FA63EFC30AFFC53E4234 /* Pods_Rubetek_practice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72B98A9F26F9E78600340D4D /* Rubetek_practice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72B98AB426F9E78900340D4D /* Build configuration list for PBXNativeTarget "Rubetek_practice" */;
+			buildPhases = (
+				F70229E6431B9B63CD51698C /* [CP] Check Pods Manifest.lock */,
+				72B98A9C26F9E78600340D4D /* Sources */,
+				72B98A9D26F9E78600340D4D /* Frameworks */,
+				72B98A9E26F9E78600340D4D /* Resources */,
+				51E16808924B3F23AEB71F5F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rubetek_practice;
+			productName = Rubetek_practice;
+			productReference = 72B98AA026F9E78600340D4D /* Rubetek_practice.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72B98A9826F9E78600340D4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					72B98A9F26F9E78600340D4D = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 72B98A9B26F9E78600340D4D /* Build configuration list for PBXProject "Rubetek_practice" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 72B98A9726F9E78600340D4D;
+			productRefGroup = 72B98AA126F9E78600340D4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72B98A9F26F9E78600340D4D /* Rubetek_practice */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72B98A9E26F9E78600340D4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72B98AB026F9E78900340D4D /* LaunchScreen.storyboard in Resources */,
+				72B98AAD26F9E78900340D4D /* Assets.xcassets in Resources */,
+				72B98AAB26F9E78600340D4D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51E16808924B3F23AEB71F5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rubetek_practice/Pods-Rubetek_practice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rubetek_practice/Pods-Rubetek_practice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rubetek_practice/Pods-Rubetek_practice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F70229E6431B9B63CD51698C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rubetek_practice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72B98A9C26F9E78600340D4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72B98ABC26F9EC1300340D4D /* NetworkService.swift in Sources */,
+				72B98AA826F9E78600340D4D /* ViewController.swift in Sources */,
+				72B98AC426F9EF0A00340D4D /* Instance.swift in Sources */,
+				72B98ABA26F9EAB800340D4D /* Cacher.swift in Sources */,
+				72B98AA426F9E78600340D4D /* AppDelegate.swift in Sources */,
+				72B98AA626F9E78600340D4D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		72B98AA926F9E78600340D4D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72B98AAA26F9E78600340D4D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		72B98AAE26F9E78900340D4D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72B98AAF26F9E78900340D4D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		72B98AB226F9E78900340D4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		72B98AB326F9E78900340D4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72B98AB526F9E78900340D4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B328B2030FC3D4A50E18C16E /* Pods-Rubetek_practice.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3J967YL2W;
+				INFOPLIST_FILE = Rubetek_practice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "zazdergod.Rubetek-practice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		72B98AB626F9E78900340D4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63078E12FD7FF5E10C99CAC1 /* Pods-Rubetek_practice.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3J967YL2W;
+				INFOPLIST_FILE = Rubetek_practice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "zazdergod.Rubetek-practice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72B98A9B26F9E78600340D4D /* Build configuration list for PBXProject "Rubetek_practice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72B98AB226F9E78900340D4D /* Debug */,
+				72B98AB326F9E78900340D4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72B98AB426F9E78900340D4D /* Build configuration list for PBXNativeTarget "Rubetek_practice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72B98AB526F9E78900340D4D /* Debug */,
+				72B98AB626F9E78900340D4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72B98A9826F9E78600340D4D /* Project object */;
+}
