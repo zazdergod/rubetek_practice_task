@@ -29,14 +29,15 @@ class Instance {
 
 class RealmInstance: Object {
     
-    @objc var name: String = ""
-    @objc var room: String? = nil
-    @objc var snapshot: String? = nil
-    @objc var id: Int = 0
-    @objc var favorites: Bool = false
-    @objc var rec: Bool = false
+    @Persisted var name: String = ""
+    @Persisted var room: String? = nil
+    @Persisted var snapshot: String? = nil
+    @Persisted var id: Int = 0
+    @Persisted var favorites: Bool = false
+    @Persisted var rec: Bool = false
+    @Persisted var isCamera: Bool = true
     
-    static func createInstance(instance: Instance) -> RealmInstance {
+    static func createInstance(instance: Instance, isCamera: Bool) -> RealmInstance {
         let realmInstance = RealmInstance()
         realmInstance.name = instance.name
         realmInstance.snapshot = instance.snapshot
@@ -46,6 +47,7 @@ class RealmInstance: Object {
         if let rec = instance.rec {
             realmInstance.rec = rec
         }
+        realmInstance.isCamera = isCamera
         return realmInstance
     }
 }

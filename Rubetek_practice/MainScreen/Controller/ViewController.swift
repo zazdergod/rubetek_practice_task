@@ -43,6 +43,7 @@ private extension ViewController {
         headerView.layer.shadowOpacity = 0.6
         headerView.layer.shadowOffset = CGSize(width: 0, height: 1)
         headerView.layer.shadowRadius = 2
+        navigationController?.navigationBar.isHidden = true
     }
     
     private func setupTableView() {
@@ -58,11 +59,11 @@ private extension ViewController {
     
     @objc func refreshTable(sender: UIRefreshControl) {
         if isShowingCameras {
-            updateCameras {
+            updateCameras(refresh: true) {
                 sender.endRefreshing()
             }
         } else {
-            updateDoors {
+            updateDoors(refresh: true) {
                 sender.endRefreshing()
             }
         }
@@ -73,24 +74,26 @@ private extension ViewController {
         let cameras = cacher.read(isCamera: true)
         if cameras.count != 0 {
             self.cameras = cameras
+            self.instansesTableView.reloadData()
         } else {
-            updateCameras {
+            updateCameras(refresh: false) {
                 
             }
         }
     }
     
-    private func updateCameras(completion: @escaping () -> Void) {
+    private func updateCameras(refresh: Bool, completion: @escaping () -> Void) {
         networkManager.requestCameras {[weak self] cameras, rooms, error in
             if let error = error {
                 print(error)
             } else if let cameras = cameras {
                 self?.cameras = cameras
-         
+                
                 DispatchQueue.main.async {
           
                     self?.instansesTableView.reloadData()
-                    self?.cacher.addList(list: cameras, isCamera: true)
+                    self?.cacher.addList(refresh: refresh, list: cameras, isCamera: true)
+                    completion()
                 }
             }
         }
@@ -100,14 +103,15 @@ private extension ViewController {
         let doors = cacher.read(isCamera: false)
         if doors.count != 0 {
             self.doors = doors
+            self.instansesTableView.reloadData()
         } else {
-            updateDoors {
+            updateDoors(refresh: false) {
                 
             }
         }
     }
     
-    private func updateDoors(completion: @escaping () -> Void) {
+    private func updateDoors(refresh: Bool, completion: @escaping () -> Void) {
         networkManager.requestDoors {[weak self] doors, error in
             if let error = error {
                 print(error)
@@ -117,7 +121,8 @@ private extension ViewController {
                 DispatchQueue.main.async {
                 
                     self?.instansesTableView.reloadData()
-                    self?.cacher.addList(list: doors, isCamera: false)
+                    self?.cacher.addList(refresh: refresh, list: doors, isCamera: false)
+                    completion()
                 }
             }
         }
@@ -160,6 +165,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
                 return 100
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = DetailViewController()
+        let instance = isShowingCameras ? cameras[indexPath.row] : doors[indexPath.row]
+        detailVC.setupInstance(instance: instance, isDoor: !isShowingCameras)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
 }

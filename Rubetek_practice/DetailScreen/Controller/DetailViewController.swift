@@ -8,13 +8,17 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    private var instance: Instance?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(instance)
     }
+    
 
-
-
-
+    public func setupInstance(instance: Instance) {
+        self.instance = instance
+    }
+    
 }
