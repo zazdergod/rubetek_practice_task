@@ -42,42 +42,24 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Qs-zf-JPR">
                                         <rect key="frame" x="0.0" y="150" width="414" height="40"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PzL-5n-QLd">
-                                                <rect key="frame" x="0.0" y="0.0" width="207" height="40"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="camerasButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdL-E9-9Zn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="30"/>
-                                                        <state key="normal" title="Камеры">
-                                                            <color key="titleColor" systemColor="labelColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="chooseCameras:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8HU-pV-Kh7"/>
-                                                        </connections>
-                                                    </button>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gm-aq-YPS">
-                                                        <rect key="frame" x="0.0" y="30" width="207" height="10"/>
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </view>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OVs-XO-S2L">
-                                                <rect key="frame" x="207" y="0.0" width="207" height="40"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="doorsButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVx-9L-zK2">
-                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="30"/>
-                                                        <state key="normal" title="Двери">
-                                                            <color key="titleColor" systemColor="labelColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="chooseDoors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uut-J4-DWR"/>
-                                                        </connections>
-                                                    </button>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIX-GB-8u4">
-                                                        <rect key="frame" x="0.0" y="30" width="207" height="10"/>
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </view>
-                                                </subviews>
-                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="camerasButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdL-E9-9Zn">
+                                                <rect key="frame" x="0.0" y="5" width="207" height="30"/>
+                                                <state key="normal" title="Камеры">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="chooseCameras:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8HU-pV-Kh7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="doorsButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVx-9L-zK2">
+                                                <rect key="frame" x="207" y="5" width="207" height="30"/>
+                                                <state key="normal" title="Двери">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="chooseDoors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uut-J4-DWR"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="FoQ-9y-kvp"/>
@@ -87,15 +69,35 @@
                                         <rect key="frame" x="55" y="18" width="414" height="2"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gm-aq-YPS" userLabel="Camera Bottom Line">
+                                        <rect key="frame" x="0.0" y="188" width="207" height="2"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="jfO-K5-jAY"/>
+                                            <constraint firstAttribute="width" constant="207" id="v9s-bM-tfa"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIX-GB-8u4" userLabel="Door Bottom Line">
+                                        <rect key="frame" x="207" y="188" width="207" height="2"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="0C6-NS-COt"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZIX-GB-8u4" secondAttribute="trailing" id="1if-Ej-1YM"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZIX-GB-8u4" secondAttribute="bottom" id="95F-xk-okg"/>
                                     <constraint firstAttribute="height" constant="190" id="9z1-44-hyo"/>
                                     <constraint firstItem="Mef-3Z-Q1R" firstAttribute="top" secondItem="qaF-iT-rud" secondAttribute="top" constant="32" id="C6U-lq-PYw"/>
                                     <constraint firstItem="Mef-3Z-Q1R" firstAttribute="leading" secondItem="qaF-iT-rud" secondAttribute="leading" id="HaI-hq-baL"/>
                                     <constraint firstAttribute="trailing" secondItem="7Qs-zf-JPR" secondAttribute="trailing" id="Nd0-S1-qns"/>
+                                    <constraint firstItem="ZIX-GB-8u4" firstAttribute="leading" secondItem="3gm-aq-YPS" secondAttribute="trailing" id="RBb-ti-AD2"/>
                                     <constraint firstAttribute="bottom" secondItem="7Qs-zf-JPR" secondAttribute="bottom" id="Tq9-pB-ldI"/>
                                     <constraint firstItem="7Qs-zf-JPR" firstAttribute="leading" secondItem="qaF-iT-rud" secondAttribute="leading" id="bW7-AF-qeo"/>
+                                    <constraint firstAttribute="bottom" secondItem="3gm-aq-YPS" secondAttribute="bottom" id="dzn-M9-Eri"/>
+                                    <constraint firstItem="3gm-aq-YPS" firstAttribute="leading" secondItem="qaF-iT-rud" secondAttribute="leading" id="qKK-5Z-3A8"/>
                                     <constraint firstAttribute="trailing" secondItem="Mef-3Z-Q1R" secondAttribute="trailing" id="vFo-HV-o97"/>
                                 </constraints>
                             </view>
@@ -114,6 +116,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Cnq-lR-FdK"/>
                     <connections>
+                        <outlet property="cameraBottomLine" destination="3gm-aq-YPS" id="aFs-ay-237"/>
+                        <outlet property="doorBottomLine" destination="ZIX-GB-8u4" id="kAO-LP-Nrg"/>
                         <outlet property="headerView" destination="qaF-iT-rud" id="pCq-sU-byq"/>
                         <outlet property="instansesTableView" destination="Tdk-d7-rZq" id="xet-ig-rzS"/>
                     </connections>

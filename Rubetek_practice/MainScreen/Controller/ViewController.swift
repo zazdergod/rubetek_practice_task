@@ -11,6 +11,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var instansesTableView: UITableView!
+    @IBOutlet weak var cameraBottomLine: UIView!
+    @IBOutlet weak var doorBottomLine: UIView!
+    
     
     private let networkManager = NetworkService()
     private let cacher = Cacher()
@@ -28,11 +31,15 @@ class ViewController: UIViewController {
   
     @IBAction func chooseCameras(_ sender: Any) {
         isShowingCameras = true
+        doorBottomLine.isHidden = true
+        cameraBottomLine.isHidden = false
         self.getCameras()
     }
     
     @IBAction func chooseDoors(_ sender: Any) {
         isShowingCameras = false
+        doorBottomLine.isHidden = false
+        cameraBottomLine.isHidden = true
         self.getDoors()
     }
 }
