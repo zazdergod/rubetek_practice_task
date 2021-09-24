@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var instanceImageView: UIImageView!
     @IBOutlet weak var recView: UIView!
     @IBOutlet weak var openDoorView: UIView!
+    @IBOutlet weak var zoomButton: UIButton!
     
     private var instance: Instance?
     private var isDoorView: Bool?
@@ -28,6 +29,9 @@ class DetailViewController: UIViewController {
         self.popBack()
     }
     
+    @IBAction func zoomCamera(_ sender: Any) {
+        print("zoom")
+    }
     
 }
 
@@ -45,6 +49,9 @@ extension DetailViewController {
         }
         if let rec = instance?.rec, rec {
             recView.isHidden = false
+        }
+        if let isDoorView = isDoorView, isDoorView {
+            zoomButton.isHidden = true
         }
     }
     

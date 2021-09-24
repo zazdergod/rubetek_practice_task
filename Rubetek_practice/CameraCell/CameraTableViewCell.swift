@@ -34,7 +34,6 @@ class CameraTableViewCell: UITableViewCell {
             let url = URL(string: snapshot)
             cameraImage.kf.setImage(with: url)
         }
-        print(camera.name)
     }
     
 }

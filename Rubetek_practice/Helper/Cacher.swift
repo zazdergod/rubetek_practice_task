@@ -20,9 +20,6 @@ class Cacher {
     }
     
     
-
-    
-    
     public func read(isCamera: Bool) -> [Instance] {
         let data = realm.objects(RealmInstance.self).filter("isCamera == \(isCamera ? 1 : 0)")
         if data.count != 0 {
