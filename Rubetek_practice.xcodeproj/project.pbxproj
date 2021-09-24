@@ -37,7 +37,7 @@
 		722FD4A626FB4AE600F60C7C /* SmallDoorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallDoorTableViewCell.swift; sourceTree = "<group>"; };
 		722FD4A726FB4AE600F60C7C /* SmallDoorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallDoorTableViewCell.xib; sourceTree = "<group>"; };
 		722FD4B526FB677500F60C7C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		722FD4B626FB677500F60C7C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DetailViewController.xib; path = ../Model/DetailViewController.xib; sourceTree = "<group>"; };
+		722FD4B626FB677500F60C7C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		72541C6426FCE84E00AF6039 /* ElementsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsExtensions.swift; sourceTree = "<group>"; };
 		72B98AA026F9E78600340D4D /* Rubetek_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rubetek_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B98AA326F9E78600340D4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,57 +66,132 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		722FD49C26FB156800F60C7C /* CameraCell */ = {
+		726F3DBF26FDFC7700F14A55 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				722FD49D26FB159C00F60C7C /* CameraTableViewCell.swift */,
-				722FD49E26FB159C00F60C7C /* CameraTableViewCell.xib */,
+				726F3DCC26FDFE4E00F14A55 /* Cacher */,
+				726F3DCB26FDFE3900F14A55 /* NetworkService */,
+				726F3DCA26FDFE2700F14A55 /* ElementsExtensions */,
+				72B98AB726F9E81C00340D4D /* SystemFiles */,
 			);
-			path = CameraCell;
+			path = Core;
 			sourceTree = "<group>";
 		};
-		722FD4A126FB225000F60C7C /* DoorCell */ = {
+		726F3DC026FDFC8300F14A55 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				722FD4A226FB227800F60C7C /* DoorTableViewCell.swift */,
-				722FD4A326FB227800F60C7C /* DoorTableViewCell.xib */,
-				722FD4A626FB4AE600F60C7C /* SmallDoorTableViewCell.swift */,
-				722FD4A726FB4AE600F60C7C /* SmallDoorTableViewCell.xib */,
+				726F3DC226FDFD4300F14A55 /* AppFiles */,
+				726F3DC126FDFCAA00F14A55 /* SupportFiles */,
 			);
-			path = DoorCell;
+			path = Main;
 			sourceTree = "<group>";
 		};
-		722FD4AA26FB4F6200F60C7C /* DetailScreen */ = {
+		726F3DC126FDFCAA00F14A55 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
-				722FD4B426FB674A00F60C7C /* Controler */,
-				722FD4AD26FB4F7D00F60C7C /* Model */,
-				722FD4AC26FB4F7800F60C7C /* View */,
+				72B98AAC26F9E78900340D4D /* Assets.xcassets */,
+				72B98AAE26F9E78900340D4D /* LaunchScreen.storyboard */,
+				72B98AB126F9E78900340D4D /* Info.plist */,
 			);
-			path = DetailScreen;
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
-		722FD4AC26FB4F7800F60C7C /* View */ = {
+		726F3DC226FDFD4300F14A55 /* AppFiles */ = {
+			isa = PBXGroup;
+			children = (
+				726F3DC426FDFD7E00F14A55 /* MainscreenModule */,
+			);
+			path = AppFiles;
+			sourceTree = "<group>";
+		};
+		726F3DC326FDFD4D00F14A55 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				722FD4B626FB677500F60C7C /* DetailViewController.xib */,
+				72B98AA926F9E78600340D4D /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		726F3DC426FDFD7E00F14A55 /* MainscreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				726F3DC326FDFD4D00F14A55 /* Storyboard */,
+				726F3DC726FDFDAD00F14A55 /* Model */,
+				726F3DC626FDFDA600F14A55 /* View */,
+				726F3DC526FDFD9500F14A55 /* Controller */,
+			);
+			path = MainscreenModule;
+			sourceTree = "<group>";
+		};
+		726F3DC526FDFD9500F14A55 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				722FD4B526FB677500F60C7C /* DetailViewController.swift */,
+				72B98AA726F9E78600340D4D /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		726F3DC626FDFDA600F14A55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				726F3DC926FDFE0000F14A55 /* Class */,
+				726F3DC826FDFDFA00F14A55 /* Xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		722FD4AD26FB4F7D00F60C7C /* Model */ = {
+		726F3DC726FDFDAD00F14A55 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				72B98AC326F9EF0A00340D4D /* Instance.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		722FD4B426FB674A00F60C7C /* Controler */ = {
+		726F3DC826FDFDFA00F14A55 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				722FD4B526FB677500F60C7C /* DetailViewController.swift */,
+				722FD4A326FB227800F60C7C /* DoorTableViewCell.xib */,
+				722FD4A726FB4AE600F60C7C /* SmallDoorTableViewCell.xib */,
+				722FD49E26FB159C00F60C7C /* CameraTableViewCell.xib */,
 			);
-			path = Controler;
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		726F3DC926FDFE0000F14A55 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				722FD4A226FB227800F60C7C /* DoorTableViewCell.swift */,
+				722FD4A626FB4AE600F60C7C /* SmallDoorTableViewCell.swift */,
+				722FD49D26FB159C00F60C7C /* CameraTableViewCell.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		726F3DCA26FDFE2700F14A55 /* ElementsExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				72541C6426FCE84E00AF6039 /* ElementsExtensions.swift */,
+			);
+			path = ElementsExtensions;
+			sourceTree = "<group>";
+		};
+		726F3DCB26FDFE3900F14A55 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				72B98ABB26F9EC1300340D4D /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		726F3DCC26FDFE4E00F14A55 /* Cacher */ = {
+			isa = PBXGroup;
+			children = (
+				72B98AB926F9EAB800340D4D /* Cacher.swift */,
+			);
+			path = Cacher;
 			sourceTree = "<group>";
 		};
 		72B98A9726F9E78600340D4D = {
@@ -140,70 +215,19 @@
 		72B98AA226F9E78600340D4D /* Rubetek_practice */ = {
 			isa = PBXGroup;
 			children = (
-				722FD4AA26FB4F6200F60C7C /* DetailScreen */,
-				722FD4A126FB225000F60C7C /* DoorCell */,
-				722FD49C26FB156800F60C7C /* CameraCell */,
-				72B98AC026F9ED5B00340D4D /* MainScreen */,
-				72B98AB826F9EAA900340D4D /* Helper */,
-				72B98AB726F9E81C00340D4D /* SupportFiles */,
-				72B98AAC26F9E78900340D4D /* Assets.xcassets */,
-				72B98AAE26F9E78900340D4D /* LaunchScreen.storyboard */,
-				72B98AB126F9E78900340D4D /* Info.plist */,
+				726F3DC026FDFC8300F14A55 /* Main */,
+				726F3DBF26FDFC7700F14A55 /* Core */,
 			);
 			path = Rubetek_practice;
 			sourceTree = "<group>";
 		};
-		72B98AB726F9E81C00340D4D /* SupportFiles */ = {
+		72B98AB726F9E81C00340D4D /* SystemFiles */ = {
 			isa = PBXGroup;
 			children = (
 				72B98AA526F9E78600340D4D /* SceneDelegate.swift */,
 				72B98AA326F9E78600340D4D /* AppDelegate.swift */,
 			);
-			path = SupportFiles;
-			sourceTree = "<group>";
-		};
-		72B98AB826F9EAA900340D4D /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				72B98AB926F9EAB800340D4D /* Cacher.swift */,
-				72B98ABB26F9EC1300340D4D /* NetworkService.swift */,
-				72541C6426FCE84E00AF6039 /* ElementsExtensions.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		72B98ABD26F9ED4100340D4D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				72B98AC326F9EF0A00340D4D /* Instance.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		72B98ABE26F9ED4900340D4D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				72B98AA926F9E78600340D4D /* Main.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		72B98ABF26F9ED4E00340D4D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				72B98AA726F9E78600340D4D /* ViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		72B98AC026F9ED5B00340D4D /* MainScreen */ = {
-			isa = PBXGroup;
-			children = (
-				72B98ABF26F9ED4E00340D4D /* Controller */,
-				72B98ABE26F9ED4900340D4D /* View */,
-				72B98ABD26F9ED4100340D4D /* Model */,
-			);
-			path = MainScreen;
+			path = SystemFiles;
 			sourceTree = "<group>";
 		};
 		80C8A3F803A4F508B6C42C2C /* Pods */ = {
@@ -501,7 +525,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D3J967YL2W;
-				INFOPLIST_FILE = Rubetek_practice/Info.plist;
+				INFOPLIST_FILE = Rubetek_practice/Main/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,7 +545,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D3J967YL2W;
-				INFOPLIST_FILE = Rubetek_practice/Info.plist;
+				INFOPLIST_FILE = Rubetek_practice/Main/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
