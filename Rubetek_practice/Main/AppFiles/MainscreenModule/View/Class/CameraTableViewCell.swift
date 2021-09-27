@@ -25,7 +25,7 @@ class CameraTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    public func setupCameraTableCell(camera: Instance) {
+    public func setupCameraTableCell(camera: Camera) {
         if !camera.favorites {
             favoriteImage.isHidden = true
         }

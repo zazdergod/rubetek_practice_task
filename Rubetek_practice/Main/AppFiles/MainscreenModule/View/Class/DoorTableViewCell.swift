@@ -13,19 +13,19 @@ class DoorTableViewCell: UITableViewCell {
     @IBOutlet weak var doorImageView: UIImageView!
     @IBOutlet weak var doorTitle: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+     
     }
     
-    
-    public func setupDoorTableCell(door: Instance) {
+    public func setupDoorTableCell(door: Door) {
         if let snapshot = door.snapshot {
             let url = URL(string: snapshot)
             doorImageView.kf.setImage(with: url)

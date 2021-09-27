@@ -47,9 +47,7 @@ extension DetailViewController {
             let url = URL(string: snapshot)
             instanceImageView.kf.setImage(with: url)
         }
-        if let rec = instance?.rec, rec {
-            recView.isHidden = false
-        }
+        
         if let isDoorView = isDoorView, isDoorView {
             zoomButton.isHidden = true
         }

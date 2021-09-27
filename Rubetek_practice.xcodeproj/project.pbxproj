@@ -17,13 +17,16 @@
 		722FD4B726FB677500F60C7C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722FD4B526FB677500F60C7C /* DetailViewController.swift */; };
 		722FD4B826FB677500F60C7C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 722FD4B626FB677500F60C7C /* DetailViewController.xib */; };
 		72541C6526FCE84E00AF6039 /* ElementsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541C6426FCE84E00AF6039 /* ElementsExtensions.swift */; };
+		725514672701D037008B283A /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725514662701D037008B283A /* Camera.swift */; };
+		725514692701E304008B283A /* RubetekUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725514682701E304008B283A /* RubetekUITableView.swift */; };
+		7255146B27022FF9008B283A /* Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255146A27022FF9008B283A /* Door.swift */; };
+		7255146D270258CC008B283A /* RubetecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255146C270258CC008B283A /* RubetecViewController.swift */; };
 		72B98AA426F9E78600340D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B98AA326F9E78600340D4D /* AppDelegate.swift */; };
 		72B98AA626F9E78600340D4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B98AA526F9E78600340D4D /* SceneDelegate.swift */; };
 		72B98AA826F9E78600340D4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B98AA726F9E78600340D4D /* ViewController.swift */; };
 		72B98AAB26F9E78600340D4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B98AA926F9E78600340D4D /* Main.storyboard */; };
 		72B98AAD26F9E78900340D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B98AAC26F9E78900340D4D /* Assets.xcassets */; };
 		72B98AB026F9E78900340D4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B98AAE26F9E78900340D4D /* LaunchScreen.storyboard */; };
-		72B98ABA26F9EAB800340D4D /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B98AB926F9EAB800340D4D /* Cacher.swift */; };
 		72B98ABC26F9EC1300340D4D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B98ABB26F9EC1300340D4D /* NetworkService.swift */; };
 		72B98AC426F9EF0A00340D4D /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B98AC326F9EF0A00340D4D /* Instance.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +42,10 @@
 		722FD4B526FB677500F60C7C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		722FD4B626FB677500F60C7C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		72541C6426FCE84E00AF6039 /* ElementsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsExtensions.swift; sourceTree = "<group>"; };
+		725514662701D037008B283A /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		725514682701E304008B283A /* RubetekUITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubetekUITableView.swift; sourceTree = "<group>"; };
+		7255146A27022FF9008B283A /* Door.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Door.swift; sourceTree = "<group>"; };
+		7255146C270258CC008B283A /* RubetecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubetecViewController.swift; sourceTree = "<group>"; };
 		72B98AA026F9E78600340D4D /* Rubetek_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rubetek_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B98AA326F9E78600340D4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72B98AA526F9E78600340D4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +54,6 @@
 		72B98AAC26F9E78900340D4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72B98AAF26F9E78900340D4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72B98AB126F9E78900340D4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		72B98AB926F9EAB800340D4D /* Cacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cacher.swift; sourceTree = "<group>"; };
 		72B98ABB26F9EC1300340D4D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		72B98AC326F9EF0A00340D4D /* Instance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instance.swift; sourceTree = "<group>"; };
 		B328B2030FC3D4A50E18C16E /* Pods-Rubetek_practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rubetek_practice.debug.xcconfig"; path = "Target Support Files/Pods-Rubetek_practice/Pods-Rubetek_practice.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,7 +75,6 @@
 		726F3DBF26FDFC7700F14A55 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				726F3DCC26FDFE4E00F14A55 /* Cacher */,
 				726F3DCB26FDFE3900F14A55 /* NetworkService */,
 				726F3DCA26FDFE2700F14A55 /* ElementsExtensions */,
 				72B98AB726F9E81C00340D4D /* SystemFiles */,
@@ -129,6 +134,7 @@
 			children = (
 				722FD4B526FB677500F60C7C /* DetailViewController.swift */,
 				72B98AA726F9E78600340D4D /* ViewController.swift */,
+				7255146C270258CC008B283A /* RubetecViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -146,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				72B98AC326F9EF0A00340D4D /* Instance.swift */,
+				725514662701D037008B283A /* Camera.swift */,
+				7255146A27022FF9008B283A /* Door.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +174,7 @@
 				722FD4A226FB227800F60C7C /* DoorTableViewCell.swift */,
 				722FD4A626FB4AE600F60C7C /* SmallDoorTableViewCell.swift */,
 				722FD49D26FB159C00F60C7C /* CameraTableViewCell.swift */,
+				725514682701E304008B283A /* RubetekUITableView.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -184,14 +193,6 @@
 				72B98ABB26F9EC1300340D4D /* NetworkService.swift */,
 			);
 			path = NetworkService;
-			sourceTree = "<group>";
-		};
-		726F3DCC26FDFE4E00F14A55 /* Cacher */ = {
-			isa = PBXGroup;
-			children = (
-				72B98AB926F9EAB800340D4D /* Cacher.swift */,
-			);
-			path = Cacher;
 			sourceTree = "<group>";
 		};
 		72B98A9726F9E78600340D4D = {
@@ -366,13 +367,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				72B98ABC26F9EC1300340D4D /* NetworkService.swift in Sources */,
+				7255146D270258CC008B283A /* RubetecViewController.swift in Sources */,
 				722FD4A426FB227800F60C7C /* DoorTableViewCell.swift in Sources */,
+				725514692701E304008B283A /* RubetekUITableView.swift in Sources */,
 				72541C6526FCE84E00AF6039 /* ElementsExtensions.swift in Sources */,
 				72B98AA826F9E78600340D4D /* ViewController.swift in Sources */,
 				722FD4A826FB4AE600F60C7C /* SmallDoorTableViewCell.swift in Sources */,
 				722FD49F26FB159C00F60C7C /* CameraTableViewCell.swift in Sources */,
 				72B98AC426F9EF0A00340D4D /* Instance.swift in Sources */,
-				72B98ABA26F9EAB800340D4D /* Cacher.swift in Sources */,
+				7255146B27022FF9008B283A /* Door.swift in Sources */,
+				725514672701D037008B283A /* Camera.swift in Sources */,
 				722FD4B726FB677500F60C7C /* DetailViewController.swift in Sources */,
 				72B98AA426F9E78600340D4D /* AppDelegate.swift in Sources */,
 				72B98AA626F9E78600340D4D /* SceneDelegate.swift in Sources */,
