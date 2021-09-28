@@ -28,7 +28,7 @@ class RubetekUITableView: UITableView, UITableViewDataSource, UITableViewDelegat
     }
     
     
-    public func setUpTable(isCameraShow: Bool, refreshAction: @escaping (() -> Void), cellTapped: @escaping ((Instance) -> Void)) {
+    public func setUpTable(isCameraShow: Bool, instList: [Instance], refreshAction: @escaping (() -> Void), cellTapped: @escaping ((Instance) -> Void)) {
         register(UINib(nibName: CellNames.cameraCell.rawValue, bundle: nil), forCellReuseIdentifier: "cameraCell")
         register(UINib(nibName: CellNames.doorCell.rawValue, bundle: nil), forCellReuseIdentifier: "doorCell")
         register(UINib(nibName: CellNames.smallDoorCell.rawValue, bundle: nil), forCellReuseIdentifier: "smallDoorCell")
@@ -38,15 +38,16 @@ class RubetekUITableView: UITableView, UITableViewDataSource, UITableViewDelegat
         self.refreshControl = refreshControl
         self.isCameraShow = isCameraShow
         self.cellTapped = cellTapped
+        self.instList = instList
         delegate = self
         dataSource = self
     }
 
     
     public func setInstanceList(instList: [Instance]) {
-        print(instList)
         self.instList = instList
-        reloadData()
+        self.reloadData()
+        self.refreshControl?.endRefreshing()
     }
     
     public func changeShowing(isCameraShow: Bool) {

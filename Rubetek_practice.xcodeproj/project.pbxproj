@@ -15,12 +15,13 @@
 		722FD4A826FB4AE600F60C7C /* SmallDoorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722FD4A626FB4AE600F60C7C /* SmallDoorTableViewCell.swift */; };
 		722FD4A926FB4AE600F60C7C /* SmallDoorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 722FD4A726FB4AE600F60C7C /* SmallDoorTableViewCell.xib */; };
 		722FD4B726FB677500F60C7C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722FD4B526FB677500F60C7C /* DetailViewController.swift */; };
-		722FD4B826FB677500F60C7C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 722FD4B626FB677500F60C7C /* DetailViewController.xib */; };
 		72541C6526FCE84E00AF6039 /* ElementsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541C6426FCE84E00AF6039 /* ElementsExtensions.swift */; };
 		725514672701D037008B283A /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725514662701D037008B283A /* Camera.swift */; };
 		725514692701E304008B283A /* RubetekUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725514682701E304008B283A /* RubetekUITableView.swift */; };
 		7255146B27022FF9008B283A /* Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255146A27022FF9008B283A /* Door.swift */; };
 		7255146D270258CC008B283A /* RubetecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255146C270258CC008B283A /* RubetecViewController.swift */; };
+		7289AA152703642400B6DF75 /* RubetekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7289AA142703642400B6DF75 /* RubetekHeaderView.swift */; };
+		7289AA192703974600B6DF75 /* RubetekHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7289AA182703974600B6DF75 /* RubetekHeaderView.xib */; };
 		72B98AA426F9E78600340D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B98AA326F9E78600340D4D /* AppDelegate.swift */; };
 		72B98AA626F9E78600340D4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B98AA526F9E78600340D4D /* SceneDelegate.swift */; };
 		72B98AA826F9E78600340D4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B98AA726F9E78600340D4D /* ViewController.swift */; };
@@ -40,12 +41,13 @@
 		722FD4A626FB4AE600F60C7C /* SmallDoorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallDoorTableViewCell.swift; sourceTree = "<group>"; };
 		722FD4A726FB4AE600F60C7C /* SmallDoorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallDoorTableViewCell.xib; sourceTree = "<group>"; };
 		722FD4B526FB677500F60C7C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		722FD4B626FB677500F60C7C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		72541C6426FCE84E00AF6039 /* ElementsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsExtensions.swift; sourceTree = "<group>"; };
 		725514662701D037008B283A /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		725514682701E304008B283A /* RubetekUITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubetekUITableView.swift; sourceTree = "<group>"; };
 		7255146A27022FF9008B283A /* Door.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Door.swift; sourceTree = "<group>"; };
 		7255146C270258CC008B283A /* RubetecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubetecViewController.swift; sourceTree = "<group>"; };
+		7289AA142703642400B6DF75 /* RubetekHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubetekHeaderView.swift; sourceTree = "<group>"; };
+		7289AA182703974600B6DF75 /* RubetekHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RubetekHeaderView.xib; sourceTree = "<group>"; };
 		72B98AA026F9E78600340D4D /* Rubetek_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rubetek_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B98AA326F9E78600340D4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72B98AA526F9E78600340D4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,7 +114,6 @@
 		726F3DC326FDFD4D00F14A55 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				722FD4B626FB677500F60C7C /* DetailViewController.xib */,
 				72B98AA926F9E78600340D4D /* Main.storyboard */,
 			);
 			path = Storyboard;
@@ -164,6 +165,7 @@
 				722FD4A326FB227800F60C7C /* DoorTableViewCell.xib */,
 				722FD4A726FB4AE600F60C7C /* SmallDoorTableViewCell.xib */,
 				722FD49E26FB159C00F60C7C /* CameraTableViewCell.xib */,
+				7289AA182703974600B6DF75 /* RubetekHeaderView.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -175,6 +177,7 @@
 				722FD4A626FB4AE600F60C7C /* SmallDoorTableViewCell.swift */,
 				722FD49D26FB159C00F60C7C /* CameraTableViewCell.swift */,
 				725514682701E304008B283A /* RubetekUITableView.swift */,
+				7289AA142703642400B6DF75 /* RubetekHeaderView.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -308,8 +311,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				722FD4A526FB227800F60C7C /* DoorTableViewCell.xib in Resources */,
+				7289AA192703974600B6DF75 /* RubetekHeaderView.xib in Resources */,
 				722FD4A026FB159C00F60C7C /* CameraTableViewCell.xib in Resources */,
-				722FD4B826FB677500F60C7C /* DetailViewController.xib in Resources */,
 				72B98AB026F9E78900340D4D /* LaunchScreen.storyboard in Resources */,
 				722FD4A926FB4AE600F60C7C /* SmallDoorTableViewCell.xib in Resources */,
 				72B98AAD26F9E78900340D4D /* Assets.xcassets in Resources */,
@@ -378,6 +381,7 @@
 				7255146B27022FF9008B283A /* Door.swift in Sources */,
 				725514672701D037008B283A /* Camera.swift in Sources */,
 				722FD4B726FB677500F60C7C /* DetailViewController.swift in Sources */,
+				7289AA152703642400B6DF75 /* RubetekHeaderView.swift in Sources */,
 				72B98AA426F9E78600340D4D /* AppDelegate.swift in Sources */,
 				72B98AA626F9E78600340D4D /* SceneDelegate.swift in Sources */,
 			);

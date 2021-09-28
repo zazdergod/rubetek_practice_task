@@ -9,49 +9,6 @@ import Foundation
 import RealmSwift
 
 
-//class Instance {
-//
-//    let name: String
-//    let room, snapshot: String?
-//    let id: Int
-//    var favorites: Bool
-//    var rec: Bool?
-//
-//    init(name: String, snapshot: String?, room: String?, id: Int, favorites: Bool, rec: Bool?) {
-//        self.name = name
-//        self.snapshot = snapshot
-//        self.room = room
-//        self.id = id
-//        self.favorites = favorites
-//        self.rec = rec
-//    }
-//}
-//
-//class RealmInstance: Object {
-//
-//    @Persisted var name: String = ""
-//    @Persisted var room: String? = nil
-//    @Persisted var snapshot: String? = nil
-//    @Persisted var id: Int = 0
-//    @Persisted var favorites: Bool = false
-//    @Persisted var rec: Bool = false
-//    @Persisted var isCamera: Bool = true
-//
-//    static func createInstance(instance: Instance, isCamera: Bool) -> RealmInstance {
-//        let realmInstance = RealmInstance()
-//        realmInstance.name = instance.name
-//        realmInstance.snapshot = instance.snapshot
-//        realmInstance.room = instance.room
-//        realmInstance.id = instance.id
-//        realmInstance.favorites = instance.favorites
-//        if let rec = instance.rec {
-//            realmInstance.rec = rec
-//        }
-//        realmInstance.isCamera = isCamera
-//        return realmInstance
-//    }
-//}
-
 class Instance: Object {
     
     @Persisted var name: String = ""
@@ -64,14 +21,13 @@ class Instance: Object {
     
     
     static func readInstancesFromCacher() -> [Instance] {
+        var instList: [Instance] = []
         let realm = try! Realm()
         let data = realm.objects(self)
-        if data.count != 0 {
-            return data.objects(at: IndexSet([0, data.count - 1]))
-        } else {
-            return []
+        for item in data {
+            instList.append(item)
         }
-        
+        return instList
     }
     
     class func getMethod() -> String { "" }
@@ -100,9 +56,8 @@ class Instance: Object {
                 return
             }
             if let data = data,
-               let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any],
-               let jsonData = json["data"] as? [String: Any] {
-                completionHandler(.success(jsonData))
+               let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] {
+                completionHandler(.success(json))
             }
         }
     }
@@ -112,28 +67,30 @@ class Instance: Object {
     }
     
     static func readInstaces(refresh: Bool, completionHandler: @escaping ([Instance]) -> Void) {
-        DispatchQueue.main.async {
+        
             let instListFromCacher = readInstancesFromCacher()
             if (refresh || instListFromCacher.count == 0) {
                 readInstancesFromNetwork { result in
-                    switch result {
-                    case .success(let data):
-                        let instList = mapToInstanceFromJson(data: data)
-                        writeInstances(refresh: refresh, list: instList)
-                        completionHandler(instList)
-                        
-                        
-                    case .failure(let error):
-                        print(error)
+                    DispatchQueue.main.async {
+                        switch result {
+                        case .success(let data):
+                            let instList = mapToInstanceFromJson(data: data)
+                            writeInstances(refresh: refresh, list: instList)
+                            completionHandler(instList)
+                        case .failure(let error):
+                            print(error)
+                        }
                     }
                 }
             } else {
                 
                 completionHandler(instListFromCacher)
             }
-        }
+        
     }
     
     public func toggleFavorite() { }
+    
+    public func changeTheName(newName: String) { }
     
 }

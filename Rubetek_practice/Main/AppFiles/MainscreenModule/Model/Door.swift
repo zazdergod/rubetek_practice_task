@@ -16,7 +16,7 @@ class Door: Instance {
     
     override class func mapToInstanceFromJson(data: [String : Any]) -> [Instance] {
         var doorList: [Door] = []
-        if let doors = data["cameras"] as? [[String: Any]] {
+        if let doors = data["data"] as? [[String: Any]] {
             for item in doors {
                 if let favorites = item["favorites"] as? Bool,
                    let name = item["name"] as? String,
@@ -41,6 +41,15 @@ class Door: Instance {
         if let door = realm.objects(Door.self).filter("id == \(id)").first {
             try! realm.write {
                 door.favorites = !door.favorites
+            }
+        }
+    }
+    
+    override func changeTheName(newName: String) {
+        let realm = try! Realm()
+        if let door = realm.objects(Door.self).filter("id == \(id)").first {
+            try! realm.write {
+                door.name = newName
             }
         }
     }

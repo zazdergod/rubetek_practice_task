@@ -8,16 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="Rubetek_practice" customModuleProvider="target">
-            <connections>
-                <outlet property="instanceImageView" destination="3Qd-3q-jHZ" id="mem-dV-MAa"/>
-                <outlet property="instanceTitle" destination="vZc-4E-9T8" id="mAK-DA-YGN"/>
-                <outlet property="openDoorView" destination="lPw-dh-nIj" id="yQc-YE-fhu"/>
-                <outlet property="recView" destination="TS8-xz-zhJ" id="iLy-jj-qAf"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="zoomButton" destination="uJG-Lt-IHG" id="Ykn-Ax-fUo"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="Rubetek_practice" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -48,9 +39,6 @@
                                 <constraint firstAttribute="height" constant="30" id="vbH-R4-Q8O"/>
                             </constraints>
                             <state key="normal" image="arrow_back"/>
-                            <connections>
-                                <action selector="goBack:" destination="-1" eventType="touchUpInside" id="Nc6-2q-NRM"/>
-                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -137,9 +125,6 @@
                         <constraint firstAttribute="width" constant="30" id="fQF-X4-SYc"/>
                     </constraints>
                     <state key="normal" image="zoom_image"/>
-                    <connections>
-                        <action selector="zoomCamera:" destination="-1" eventType="touchUpInside" id="liP-Xr-fuy"/>
-                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -162,7 +147,7 @@
                 <constraint firstItem="3Qd-3q-jHZ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="yCa-TW-oiM"/>
                 <constraint firstItem="3Qd-3q-jHZ" firstAttribute="leading" secondItem="TS8-xz-zhJ" secondAttribute="trailing" constant="-126" id="ydg-8s-l7z"/>
             </constraints>
-            <point key="canvasLocation" x="188" y="-2834"/>
+            <point key="canvasLocation" x="229" y="-4120"/>
         </view>
     </objects>
     <resources>

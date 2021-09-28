@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tdk-d7-rZq" customClass="RubetekUITableView" customModule="Rubetek_practice" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="190" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="187" width="414" height="675"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -27,98 +27,29 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="xPj-20-BmT"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaF-iT-rud">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YHi-dq-N8I" customClass="RubetekHeaderView" customModule="Rubetek_practice" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мой дом" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mef-3Z-Q1R">
-                                        <rect key="frame" x="0.0" y="32" width="414" height="110"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="110" id="Lcj-j8-esA"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Qs-zf-JPR">
-                                        <rect key="frame" x="0.0" y="150" width="414" height="40"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="camerasButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdL-E9-9Zn">
-                                                <rect key="frame" x="0.0" y="5" width="207" height="30"/>
-                                                <state key="normal" title="Камеры">
-                                                    <color key="titleColor" systemColor="labelColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chooseCameras:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8HU-pV-Kh7"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="doorsButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVx-9L-zK2">
-                                                <rect key="frame" x="207" y="5" width="207" height="30"/>
-                                                <state key="normal" title="Двери">
-                                                    <color key="titleColor" systemColor="labelColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chooseDoors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uut-J4-DWR"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="FoQ-9y-kvp"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kU3-dH-cRh">
-                                        <rect key="frame" x="55" y="18" width="414" height="2"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gm-aq-YPS" userLabel="Camera Bottom Line">
-                                        <rect key="frame" x="0.0" y="188" width="207" height="2"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="2" id="jfO-K5-jAY"/>
-                                            <constraint firstAttribute="width" constant="207" id="v9s-bM-tfa"/>
-                                        </constraints>
-                                    </view>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIX-GB-8u4" userLabel="Door Bottom Line">
-                                        <rect key="frame" x="207" y="188" width="207" height="2"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="2" id="0C6-NS-COt"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ZIX-GB-8u4" secondAttribute="trailing" id="1if-Ej-1YM"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZIX-GB-8u4" secondAttribute="bottom" id="95F-xk-okg"/>
-                                    <constraint firstAttribute="height" constant="190" id="9z1-44-hyo"/>
-                                    <constraint firstItem="Mef-3Z-Q1R" firstAttribute="top" secondItem="qaF-iT-rud" secondAttribute="top" constant="32" id="C6U-lq-PYw"/>
-                                    <constraint firstItem="Mef-3Z-Q1R" firstAttribute="leading" secondItem="qaF-iT-rud" secondAttribute="leading" id="HaI-hq-baL"/>
-                                    <constraint firstAttribute="trailing" secondItem="7Qs-zf-JPR" secondAttribute="trailing" id="Nd0-S1-qns"/>
-                                    <constraint firstItem="ZIX-GB-8u4" firstAttribute="leading" secondItem="3gm-aq-YPS" secondAttribute="trailing" id="RBb-ti-AD2"/>
-                                    <constraint firstAttribute="bottom" secondItem="7Qs-zf-JPR" secondAttribute="bottom" id="Tq9-pB-ldI"/>
-                                    <constraint firstItem="7Qs-zf-JPR" firstAttribute="leading" secondItem="qaF-iT-rud" secondAttribute="leading" id="bW7-AF-qeo"/>
-                                    <constraint firstAttribute="bottom" secondItem="3gm-aq-YPS" secondAttribute="bottom" id="dzn-M9-Eri"/>
-                                    <constraint firstItem="3gm-aq-YPS" firstAttribute="leading" secondItem="qaF-iT-rud" secondAttribute="leading" id="qKK-5Z-3A8"/>
-                                    <constraint firstAttribute="trailing" secondItem="Mef-3Z-Q1R" secondAttribute="trailing" id="vFo-HV-o97"/>
+                                    <constraint firstAttribute="height" constant="190" id="4mo-fv-gJT"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qaF-iT-rud" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0S3-NW-6zZ"/>
-                            <constraint firstItem="Tdk-d7-rZq" firstAttribute="top" secondItem="qaF-iT-rud" secondAttribute="bottom" id="5hL-xz-7Ly"/>
+                            <constraint firstItem="YHi-dq-N8I" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9nN-XH-IB5"/>
                             <constraint firstItem="Tdk-d7-rZq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CXR-fA-u1u"/>
-                            <constraint firstItem="qaF-iT-rud" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KeN-Pv-c6n"/>
+                            <constraint firstItem="YHi-dq-N8I" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Huk-Db-gQi"/>
                             <constraint firstItem="Tdk-d7-rZq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MIq-7c-O1P"/>
-                            <constraint firstItem="qaF-iT-rud" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oAQ-bc-fkr"/>
+                            <constraint firstItem="Tdk-d7-rZq" firstAttribute="top" secondItem="YHi-dq-N8I" secondAttribute="bottom" constant="-3" id="pr2-SR-Di3"/>
                             <constraint firstItem="Tdk-d7-rZq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="z0D-xC-RGI"/>
+                            <constraint firstItem="YHi-dq-N8I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zMV-nj-Z1T"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cnq-lR-FdK"/>
                     <connections>
-                        <outlet property="cameraBottomLine" destination="3gm-aq-YPS" id="aFs-ay-237"/>
-                        <outlet property="doorBottomLine" destination="ZIX-GB-8u4" id="kAO-LP-Nrg"/>
-                        <outlet property="headerView" destination="qaF-iT-rud" id="pCq-sU-byq"/>
+                        <outlet property="headerView" destination="YHi-dq-N8I" id="K5O-gM-cGj"/>
                         <outlet property="instansesTableView" destination="Tdk-d7-rZq" id="xet-ig-rzS"/>
                     </connections>
                 </viewController>
@@ -163,6 +94,9 @@
                                                     <constraint firstAttribute="width" constant="30" id="oey-Kz-RSo"/>
                                                 </constraints>
                                                 <state key="normal" image="arrow_back"/>
+                                                <connections>
+                                                    <action selector="goBack:" destination="po8-nr-bZC" eventType="touchUpInside" id="JpS-We-6oQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -249,6 +183,9 @@
                                             <constraint firstAttribute="width" constant="30" id="LGa-UE-0GM"/>
                                         </constraints>
                                         <state key="normal" image="zoom_image"/>
+                                        <connections>
+                                            <action selector="zoomCamera:" destination="po8-nr-bZC" eventType="touchUpInside" id="g7B-z4-xzu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="a2m-K3-JZL"/>
@@ -276,10 +213,101 @@
                         <viewLayoutGuide key="safeArea" id="dyE-6N-dkh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="instanceImageView" destination="SQb-Hu-gBc" id="5rh-4o-TtJ"/>
+                        <outlet property="instanceTitle" destination="bxt-8u-0l0" id="4Sk-Zz-Gdl"/>
+                        <outlet property="openDoorView" destination="KRl-vg-Od4" id="Lb1-WI-8Pd"/>
+                        <outlet property="recView" destination="fc9-FB-rpI" id="M7N-zh-wve"/>
+                        <outlet property="zoomButton" destination="Y15-dM-WUM" id="ooo-K1-d6U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="drD-O9-WE9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2077" y="98"/>
+            <point key="canvasLocation" x="1848" y="78"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HXe-kg-5G7">
+            <objects>
+                <viewController id="21h-Fs-JvY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7eV-af-bZj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaF-iT-rud">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мой дом" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mef-3Z-Q1R">
+                                        <rect key="frame" x="0.0" y="32" width="207" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="Lcj-j8-esA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Qs-zf-JPR">
+                                        <rect key="frame" x="0.0" y="150" width="207" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="camerasButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdL-E9-9Zn">
+                                                <rect key="frame" x="0.0" y="5" width="103.5" height="30"/>
+                                                <state key="normal" title="Камеры">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="doorsButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVx-9L-zK2">
+                                                <rect key="frame" x="103.5" y="5" width="103.5" height="30"/>
+                                                <state key="normal" title="Двери">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="FoQ-9y-kvp"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gm-aq-YPS" userLabel="Camera Bottom Line">
+                                        <rect key="frame" x="0.0" y="188" width="207" height="2"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="jfO-K5-jAY"/>
+                                            <constraint firstAttribute="width" constant="207" id="v9s-bM-tfa"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIX-GB-8u4" userLabel="Door Bottom Line">
+                                        <rect key="frame" x="207" y="188" width="0.0" height="2"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="0C6-NS-COt"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZIX-GB-8u4" secondAttribute="trailing" id="1if-Ej-1YM"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZIX-GB-8u4" secondAttribute="bottom" id="95F-xk-okg"/>
+                                    <constraint firstAttribute="height" constant="190" id="9z1-44-hyo"/>
+                                    <constraint firstItem="Mef-3Z-Q1R" firstAttribute="top" secondItem="qaF-iT-rud" secondAttribute="top" constant="32" id="C6U-lq-PYw"/>
+                                    <constraint firstItem="Mef-3Z-Q1R" firstAttribute="leading" secondItem="qaF-iT-rud" secondAttribute="leading" id="HaI-hq-baL"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Qs-zf-JPR" secondAttribute="trailing" id="Nd0-S1-qns"/>
+                                    <constraint firstItem="ZIX-GB-8u4" firstAttribute="leading" secondItem="3gm-aq-YPS" secondAttribute="trailing" id="RBb-ti-AD2"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Qs-zf-JPR" secondAttribute="bottom" id="Tq9-pB-ldI"/>
+                                    <constraint firstItem="7Qs-zf-JPR" firstAttribute="leading" secondItem="qaF-iT-rud" secondAttribute="leading" id="bW7-AF-qeo"/>
+                                    <constraint firstAttribute="bottom" secondItem="3gm-aq-YPS" secondAttribute="bottom" id="dzn-M9-Eri"/>
+                                    <constraint firstItem="3gm-aq-YPS" firstAttribute="leading" secondItem="qaF-iT-rud" secondAttribute="leading" id="qKK-5Z-3A8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mef-3Z-Q1R" secondAttribute="trailing" id="vFo-HV-o97"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hnh-gb-k1C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qaF-iT-rud" firstAttribute="top" secondItem="7eV-af-bZj" secondAttribute="top" id="XSv-kh-lUL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dco-dt-3T8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2677" y="129"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sc9-el-urq">
