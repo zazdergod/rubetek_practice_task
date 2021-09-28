@@ -12,6 +12,7 @@ class RubetekUITableView: UITableView, UITableViewDataSource, UITableViewDelegat
     private var instList: [Instance]?
     private var askRefersh: (() -> Void)?
     private var cellTapped: ((Instance) -> Void)?
+    private var showMessage: ((UIAlertController) -> Void)?
     
     
     enum CellHeight: CGFloat {
@@ -28,7 +29,7 @@ class RubetekUITableView: UITableView, UITableViewDataSource, UITableViewDelegat
     }
     
     
-    public func setUpTable(isCameraShow: Bool, instList: [Instance], refreshAction: @escaping (() -> Void), cellTapped: @escaping ((Instance) -> Void)) {
+    public func setUpTable(isCameraShow: Bool, instList: [Instance], refreshAction: @escaping (() -> Void), cellTapped: @escaping ((Instance) -> Void), showMessage: @escaping (UIAlertController) -> Void) {
         register(UINib(nibName: CellNames.cameraCell.rawValue, bundle: nil), forCellReuseIdentifier: "cameraCell")
         register(UINib(nibName: CellNames.doorCell.rawValue, bundle: nil), forCellReuseIdentifier: "doorCell")
         register(UINib(nibName: CellNames.smallDoorCell.rawValue, bundle: nil), forCellReuseIdentifier: "smallDoorCell")
@@ -39,6 +40,7 @@ class RubetekUITableView: UITableView, UITableViewDataSource, UITableViewDelegat
         self.isCameraShow = isCameraShow
         self.cellTapped = cellTapped
         self.instList = instList
+        self.showMessage = showMessage
         delegate = self
         dataSource = self
     }
@@ -96,5 +98,27 @@ class RubetekUITableView: UITableView, UITableViewDataSource, UITableViewDelegat
         }
     }
 
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let favorite = UIContextualAction(style: .normal, title: nil) { [weak self] _, _, _ in
+            let instance = self?.instList?[indexPath.row]
+            instance?.toggleFavorite()
+        }
+        favorite.image = UIImage(systemName: "star.fill")
+        let changeName = UIContextualAction(style: .normal, title: nil) { [weak self] _, _, _ in
+            let alert = UIAlertController(title: nil, message: "Сменить имя", preferredStyle: .alert)
+            alert.addTextField { textfield in
+                textfield.text = ""
+            }
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] _ in
+                guard let textfield = alert?.textFields?[0] else { return }
+                let instance = self?.instList?[indexPath.row]
+                guard let text = textfield.text else { return }
+                instance?.changeTheName(newName: text)
+            }))
+            self?.showMessage?(alert)
+        }
+        changeName.image = UIImage(systemName: "pencil")
+        return UISwipeActionsConfiguration(actions: [favorite, changeName])
+    }
 
 }

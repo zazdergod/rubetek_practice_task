@@ -25,10 +25,6 @@ class ViewController: RubetecViewController {
         setupHeader()
         setupTableView()
     }
-    
-    
-    
-  
 }
 
 private extension ViewController {
@@ -80,8 +76,9 @@ private extension ViewController {
                 guard let isCameraShow = self?.isCameraShow else { return }
                 detailVC.setupInstance(instance: instance, isDoor: !isCameraShow)
                 self?.navigationController?.pushViewController(detailVC, animated: true)
+            } showMessage: { [weak self] alert in
+                self?.present(alert, animated: false, completion: nil)
             }
-            
         }
     }
 }

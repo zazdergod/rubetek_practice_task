@@ -14,8 +14,8 @@
             filePath = "Rubetek_practice/Main/AppFiles/MainscreenModule/View/Class/RubetekUITableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,9 +30,9 @@
             filePath = "Rubetek_practice/Main/AppFiles/MainscreenModule/View/Class/RubetekUITableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:showMessage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,9 +46,9 @@
             filePath = "Rubetek_practice/Main/AppFiles/MainscreenModule/View/Class/RubetekUITableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:)"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:showMessage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -62,9 +62,9 @@
             filePath = "Rubetek_practice/Main/AppFiles/MainscreenModule/View/Class/RubetekUITableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:showMessage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -78,9 +78,9 @@
             filePath = "Rubetek_practice/Main/AppFiles/MainscreenModule/View/Class/RubetekUITableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:)"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:showMessage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,9 +94,9 @@
             filePath = "Rubetek_practice/Main/AppFiles/MainscreenModule/View/Class/RubetekUITableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:showMessage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -110,9 +110,9 @@
             filePath = "Rubetek_practice/Main/AppFiles/MainscreenModule/View/Class/RubetekUITableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:showMessage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -126,9 +126,9 @@
             filePath = "Rubetek_practice/Main/AppFiles/MainscreenModule/View/Class/RubetekUITableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:showMessage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -142,9 +142,9 @@
             filePath = "Rubetek_practice/Main/AppFiles/MainscreenModule/View/Class/RubetekUITableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:)"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "setUpTable(isCameraShow:instList:refreshAction:cellTapped:showMessage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -158,8 +158,8 @@
             filePath = "Rubetek_practice/Main/AppFiles/MainscreenModule/View/Class/RubetekUITableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "setInstanceList(instList:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,8 +174,8 @@
             filePath = "Rubetek_practice/Main/AppFiles/MainscreenModule/View/Class/RubetekUITableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "setInstanceList(instList:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "Rubetek_practice/Main/AppFiles/MainscreenModule/View/Class/RubetekUITableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "setInstanceList(instList:)"
             landmarkType = "7">
          </BreakpointContent>
