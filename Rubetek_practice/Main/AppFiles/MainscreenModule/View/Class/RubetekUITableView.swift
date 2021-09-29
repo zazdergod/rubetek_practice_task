@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RubetekUITableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
@@ -13,6 +14,7 @@ class RubetekUITableView: UITableView, UITableViewDataSource, UITableViewDelegat
     private var askRefersh: (() -> Void)?
     private var cellTapped: ((Instance) -> Void)?
     private var showMessage: ((UIAlertController) -> Void)?
+    private var notificationToken: NotificationToken?
     
     
     enum CellHeight: CGFloat {
@@ -50,6 +52,26 @@ class RubetekUITableView: UITableView, UITableViewDataSource, UITableViewDelegat
         self.instList = instList
         self.reloadData()
         self.refreshControl?.endRefreshing()
+        let realm = try! Realm()
+        guard let instance = instList.first else { return }
+        let instances = realm.objects(type(of: instance).self)
+        notificationToken = instances.observe { [weak self] (changes: RealmCollectionChange) in
+            guard let self = self else { return }
+            switch changes {
+            case .initial(_):
+                self.reloadData()
+            case .update(_, deletions: let deletions, insertions: let insertions, modifications: let modifications):
+                self.performBatchUpdates {
+                    self.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }),
+                                                             with: .automatic)
+                } completion: { _ in
+                    
+                }
+
+            case .error(let error):
+                print(error)
+            }
+        }
     }
     
     public func changeShowing(isCameraShow: Bool) {
