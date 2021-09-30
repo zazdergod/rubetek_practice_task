@@ -21,7 +21,7 @@
                         <rect key="frame" x="10" y="10" width="394" height="60"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEW-4D-AUy">
-                                <rect key="frame" x="15" y="16" width="364" height="28"/>
+                                <rect key="frame" x="15" y="15" width="364" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -29,10 +29,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="NEW-4D-AUy" firstAttribute="top" secondItem="JKk-GZ-cb3" secondAttribute="top" constant="15" id="Gum-5S-l67"/>
                             <constraint firstAttribute="trailing" secondItem="NEW-4D-AUy" secondAttribute="trailing" constant="15" id="U0r-aD-SpF"/>
-                            <constraint firstItem="NEW-4D-AUy" firstAttribute="top" secondItem="JKk-GZ-cb3" secondAttribute="top" constant="16" id="gSh-8I-cRQ"/>
                             <constraint firstItem="NEW-4D-AUy" firstAttribute="leading" secondItem="JKk-GZ-cb3" secondAttribute="leading" constant="15" id="k2F-1U-UcQ"/>
-                            <constraint firstAttribute="bottom" secondItem="NEW-4D-AUy" secondAttribute="bottom" constant="16" id="mU6-LL-LzR"/>
+                            <constraint firstAttribute="bottom" secondItem="NEW-4D-AUy" secondAttribute="bottom" constant="15" id="lsN-Du-gas"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -45,7 +45,7 @@
                 <constraints>
                     <constraint firstItem="JKk-GZ-cb3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="OIE-5g-fCG"/>
                     <constraint firstItem="JKk-GZ-cb3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Q5y-aE-ZCG"/>
-                    <constraint firstAttribute="bottom" secondItem="JKk-GZ-cb3" secondAttribute="bottom" constant="10" id="bn4-gx-V7a"/>
+                    <constraint firstAttribute="bottom" secondItem="JKk-GZ-cb3" secondAttribute="bottom" constant="10" id="UTO-n0-D6c"/>
                     <constraint firstAttribute="trailing" secondItem="JKk-GZ-cb3" secondAttribute="trailing" constant="10" id="zwR-gh-JAN"/>
                 </constraints>
             </tableViewCellContentView>

@@ -7,23 +7,12 @@
 
 import UIKit
 
-class SmallDoorTableViewCell: UITableViewCell {
+class SmallDoorTableViewCell: RubetekUITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-     
-    }
-    
-    public func setupDoorTableCell(door: Instance) {
+    override func setup(data: Any?) {
+        guard let door = data as? Door else { return }
         titleLabel.text = door.name
     }
-    
 }

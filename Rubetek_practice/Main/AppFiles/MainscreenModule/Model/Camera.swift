@@ -9,13 +9,13 @@ import Foundation
 import RealmSwift
 
 
-class Camera: Instance {
+class Camera: WorkInstance {
     
     @Persisted var rec: Bool = false
     
   
-    override class func getMethod() -> String {
-        "/cameras/"
+    override class func getRequest() -> URLRequest? {
+        return RubetekApiManager.makeRequest(method: .cameras)
     }
     
     override class func mapToInstanceFromJson(data: [String : Any]) -> [Instance] {

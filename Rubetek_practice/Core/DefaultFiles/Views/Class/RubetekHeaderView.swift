@@ -30,7 +30,6 @@ class RubetekHeaderView: UIView {
     
     private func commonInit() {
         guard let viewFromXib = Bundle.main.loadNibNamed("RubetekHeaderView", owner: self, options: nil)?[0] as? UIView else { return }
-        print(viewFromXib)
         viewFromXib.frame = bounds
         addSubview(viewFromXib)
     }

@@ -8,10 +8,11 @@
 import Foundation
 import RealmSwift
 
-class Door: Instance {
+class Door: WorkInstance {
     
-    override class func getMethod() -> String {
-        "/doors/"
+    
+    override class func getRequest() -> URLRequest? {
+        return RubetekApiManager.makeRequest(method: .doors)
     }
     
     override class func mapToInstanceFromJson(data: [String : Any]) -> [Instance] {

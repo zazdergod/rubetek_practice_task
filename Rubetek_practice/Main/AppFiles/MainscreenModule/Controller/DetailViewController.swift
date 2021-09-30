@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class DetailViewController: UIViewController {
+class DetailViewController: RubetecViewController {
     
     @IBOutlet weak var instanceTitle: UILabel!
     @IBOutlet weak var instanceImageView: UIImageView!
@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var openDoorView: UIView!
     @IBOutlet weak var zoomButton: UIButton!
     
-    private var instance: Instance?
+    private var instance: WorkInstance?
     private var isDoorView: Bool?
 
     override func viewDidLoad() {
@@ -24,9 +24,6 @@ class DetailViewController: UIViewController {
         setupInstanceImageView()
         setupOpenView()
         setupTitle()
-    }
-    @IBAction func goBack(_ sender: Any) {
-        self.popBack()
     }
     
     @IBAction func zoomCamera(_ sender: Any) {
@@ -37,7 +34,7 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController {
     
-    public func setupInstance(instance: Instance, isDoor: Bool) {
+    public func setupInstance(instance: WorkInstance, isDoor: Bool) {
         self.instance = instance
         self.isDoorView = isDoor
     }

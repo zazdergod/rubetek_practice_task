@@ -8,24 +8,14 @@
 import UIKit
 import Kingfisher
 
-class CameraTableViewCell: UITableViewCell {
+class CameraTableViewCell: RubetekUITableViewCell {
 
     @IBOutlet weak var cameraImage: UIImageView!
     @IBOutlet weak var cameraTitle: UILabel!
     @IBOutlet weak var favoriteImage: UIImageView!
-    
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-    
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-    public func setupCameraTableCell(camera: Camera) {
+    override func setup(data: Any?) {
+        guard let camera = data as? Camera else { return }
         if !camera.favorites {
             favoriteImage.isHidden = true
         }
@@ -34,6 +24,5 @@ class CameraTableViewCell: UITableViewCell {
             let url = URL(string: snapshot)
             cameraImage.kf.setImage(with: url)
         }
-    }
-    
+    } 
 }

@@ -10,7 +10,7 @@ import UIKit
 class ViewController: RubetecViewController {
     
     
-    @IBOutlet weak var instansesTableView: RubetekUITableView!
+    @IBOutlet weak var instansesTableView: InstanceTableView!
     @IBOutlet weak var headerView: RubetekHeaderView!
     
     
@@ -39,7 +39,8 @@ private extension ViewController {
             if !isCameraShow {
                 self?.isCameraShow = !isCameraShow
                 Camera.readInstaces(refresh: false) { instList in
-                    self?.instansesTableView.setInstanceList(instList: instList)
+                    guard let instList = instList as? [WorkInstance] else { return }
+                    self?.instansesTableView.setupItems(items: instList)
                 }
             }
         } secondSegmentTap: { [weak self] in
@@ -47,39 +48,41 @@ private extension ViewController {
             if isCameraShow {
                 self?.isCameraShow = !isCameraShow
                 Door.readInstaces(refresh: false) { instList in
-                    self?.instansesTableView.setInstanceList(instList: instList)
+                    guard let instList = instList as? [WorkInstance] else { return }
+                    self?.instansesTableView.setupItems(items: instList)
                 }
             }
         }
-
+        
     }
     
     private func setupTableView() {
         Camera.readInstaces(refresh: false) { [weak self] instList in
-            guard let isCameraShow = self?.isCameraShow else { return }
-            self?.instansesTableView.setUpTable(isCameraShow: isCameraShow, instList: instList) { [weak self] in
-                guard let isCameraShow = self?.isCameraShow else { return }
-                switch isCameraShow {
-                case true:
-                    Camera.readInstaces(refresh: true) { instList in
-                        self?.instansesTableView.setInstanceList(instList: instList)
-                    }
-                case false:
-                    Door.readInstaces(refresh: true) { instList in
-                        self?.instansesTableView.setInstanceList(instList: instList)
-                    }
-                }
-                
-            } cellTapped: { [weak self] instance in
-                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                guard let detailVC = storyboard.instantiateViewController(withIdentifier: VCStoryboardID.detail.rawValue) as? DetailViewController else { return }
-                guard let isCameraShow = self?.isCameraShow else { return }
-                detailVC.setupInstance(instance: instance, isDoor: !isCameraShow)
-                self?.navigationController?.pushViewController(detailVC, animated: true)
-            } showMessage: { [weak self] alert in
-                self?.present(alert, animated: false, completion: nil)
-            }
+            self?.instansesTableView.setupItems(items: instList)
         }
+        instansesTableView.setUpHandlers(isCameraShow: isCameraShow, refreshAction: { [weak self] in
+            guard let isCameraShow = self?.isCameraShow else { return }
+            switch isCameraShow {
+            case true:
+                Camera.readInstaces(refresh: true) { instList in
+                    guard let instList = instList as? [WorkInstance] else { return }
+                    self?.instansesTableView.setupItems(items: instList)
+                }
+            case false:
+                Door.readInstaces(refresh: true) { instList in
+                    guard let instList = instList as? [WorkInstance] else { return }
+                    self?.instansesTableView.setupItems(items: instList)
+                }
+            }
+        }, cellTapped: { [weak self] instance in
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let detailVC = storyboard.instantiateViewController(withIdentifier: VCStoryboardID.detail.rawValue) as? DetailViewController else { return }
+            guard let isCameraShow = self?.isCameraShow else { return }
+            detailVC.setupInstance(instance: instance, isDoor: !isCameraShow)
+            self?.navigationController?.pushViewController(detailVC, animated: true)
+        }, showMessage: { [weak self] alert in
+            self?.present(alert, animated: false, completion: nil)
+        })
     }
 }
 

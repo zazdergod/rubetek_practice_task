@@ -17,4 +17,8 @@ extension UIViewController {
     func popToRoot() {
         self.navigationController?.popToRootViewController(animated: true)
     }
+    
+    @IBAction func goBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
