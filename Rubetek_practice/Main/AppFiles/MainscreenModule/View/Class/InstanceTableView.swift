@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 class InstanceTableView: RubetekUITableView {
     
@@ -25,6 +24,7 @@ class InstanceTableView: RubetekUITableView {
     private var cellTapped: ((WorkInstance) -> Void)?
     private var showMessage: ((UIAlertController) -> Void)?
     private var isCameraShow: Bool = true
+    
     
     public func setUpHandlers(isCameraShow: Bool, refreshAction: @escaping (() -> Void), cellTapped: @escaping ((WorkInstance) -> Void), showMessage: @escaping (UIAlertController) -> Void) {
         self.isCameraShow = isCameraShow
